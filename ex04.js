@@ -24,3 +24,15 @@ isEven(6);
 isEven(5);
 
 //  écrire votre code sous ce commentaire
+
+
+function isEven(nb){
+    var result = nb%2;
+    if (result == 0){
+        console.log(1)
+        return 1;
+    } else {
+        console.log(0);
+        return 0;
+    }
+}
