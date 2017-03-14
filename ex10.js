@@ -35,7 +35,7 @@
     }
 
 */
-
+var list = {};
 shoppingList([
     ["orange", "orange", "kiwi", "ananas"],
     ["kiwi", "ananas", "banane", "prune"],
@@ -45,3 +45,23 @@ shoppingList([
 ]);
 
 //  écrire votre code sous ce commentaire
+
+function itemSorting(basket){
+	for (var i=0; i<basket.length; i++) {
+		var item = basket[i];
+		if (typeof list[item] === "undefined") {
+			list[item] = 1;
+		} else {
+			list[item] += 1;
+		}
+	}
+	return list;
+}
+
+
+function shoppingList(array) {
+	for(var i=0; i<array.length; i++){	
+		itemSorting(array[i]);
+	}
+	console.log(list);
+}	
